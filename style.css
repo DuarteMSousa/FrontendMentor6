@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 * {
     margin: 0;
     padding 0;
     box-sizing: border-box;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-size: 18px;
 }
 
@@ -20,4 +22,120 @@
     --grayishOrangeKeyShadow: hsl(28, 16%, 65%);
 
     --veryDarkGrayishBlue: hsl(221, 14%, 31%);
+}
+
+body {
+    background-color: var(--mainBackground);
+    color: white;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 34%;
+    margin-bottom: 1em;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+p{
+    font-size: small;
+}
+
+.theme{
+    display: flex;
+}
+
+.theme p{
+    align-self: flex-end;
+    margin-right: 1em;
+}
+
+.themeToggle{
+    display: flex;
+    background-color: var(--screenBackground);
+    border-radius: 1em;
+    padding: .5em;
+    text-align: center;
+    align-self: flex-end;
+}
+
+
+.visor{
+    background-color: var(--screenBackground);
+    width: 35%;
+    height: 8%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.res{
+    font-size: 35px;
+    margin-right: 0.7em;
+}
+
+.keyboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    background-color: var(--toggleBackground);
+    margin: 1em;
+    padding: 1em;
+    width: 35%;
+    border-radius: 5px;
+}
+
+button{
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em 0em;
+    border: none;
+    border-radius: 7px;
+    border-bottom: solid var(--grayishOrangeKeyShadow);
+    height: 2em;
+    color: var(--veryDarkGrayishBlue);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: white;
+}
+
+#reset, #del{
+    background-color: var(--blueKeyBackground);
+    color: white;
+    border-bottom: solid var(--blueKeyShadow);
+}
+
+#reset:hover,#del:hover{
+    background-color:#A2B3E1 ;
+}
+
+#reset, #equals{
+    grid-column: span 2;
+}
+
+#equals:hover{
+    background-color: #F96C5B;
+}
+
+#equals{
+    background-color: var(--redKeyBackground);
+    border-bottom: solid var(--redKeyShadow);
+    color: white;
 }
