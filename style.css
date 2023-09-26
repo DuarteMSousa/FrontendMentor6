@@ -12,23 +12,17 @@
     --mainBackground: hsl(222, 26%, 31%);
     --toggleBackground: hsl(223, 31%, 20%);
     --screenBackground: hsl(224, 36%, 15%);
-
-
-    --blueKeyBackground: hsl(225, 21%, 49%);
-    --blueKeyShadow: hsl(224, 28%, 35%);
-    --redKeyBackground: hsl(6, 63%, 50%);
-    --redKeyShadow: hsl(6, 70%, 34%);
-    --orangeKeyBackground: hsl(30, 25%, 89%);
-    --grayishOrangeKeyShadow: hsl(28, 16%, 65%);
-
-    --veryDarkGrayishBlue: hsl(221, 14%, 31%);
-
-    --white: white;
-    --textColor:var(--white);
-
+    --del_reset_KeyBackground: hsl(225, 21%, 49%);
+    --del_reset_Shadow: hsl(224, 28%, 35%);
     --resetHover: #A2B3E1;
+    --equalsKeyBackground: hsl(6, 63%, 50%);
+    --equalsKeyShadow: hsl(6, 70%, 34%);
     --equalsHover: #F96C5B;
-    --buttonHover:var(--white)
+    --mainButtonBackground: rgb(240, 233, 233);
+    --mainButtonKeyShadow: hsl(28, 16%, 65%);
+    --mainButtonFontColor: hsl(221, 14%, 31%);
+    --textColor:white;
+    --mainButtonHover:white;
 
 }
 
@@ -74,7 +68,7 @@ p {
 
 .themeToggle {
     display: flex;
-    background-color: var(--screenBackground);
+    background-color: var(--toggleBackground);
     border-radius: 1em;
     padding: .5em;
     text-align: center;
@@ -117,21 +111,22 @@ button {
     padding: 0.3em 0em;
     border: none;
     border-radius: 7px;
-    border-bottom: solid var(--grayishOrangeKeyShadow);
+    border-bottom: solid var(--mainButtonKeyShadow);
     height: 2em;
-    color: var(--veryDarkGrayishBlue);
+    color: var(--mainButtonFontColor);
     cursor: pointer;
+    background-color: var(--mainButtonBackground);
 }
 
 button:hover {
-    background-color: var(--buttonHover);
+    background-color: var(--mainButtonHover);
 }
 
 #reset,
 #del {
-    background-color: var(--blueKeyBackground);
-    color: var(--white);
-    border-bottom: solid var(--blueKeyShadow);
+    background-color: var(--del_reset_KeyBackground);
+    color: var(--textColor);
+    border-bottom: solid var(--del_reset_Shadow);
 }
 
 #reset:hover,
@@ -149,9 +144,9 @@ button:hover {
 }
 
 #equals {
-    background-color: var(--redKeyBackground);
-    border-bottom: solid var(--redKeyShadow);
-    color: var(--white);
+    background-color: var(--equalsKeyBackground);
+    border-bottom: solid var(--equalsKeyShadow);
+    color: var(--textColor);
 }
 
 .themeSwitchContainer {
@@ -171,7 +166,7 @@ button:hover {
     border-radius: 100%;
     width: 0.7em;
     height: 0.7em;
-    background-color: var(--redKeyBackground);
+    background-color: var(--equalsKeyBackground);
     translate: -0.8em 0em;
     transition: translate 0.5s ease-in-out;
 }
