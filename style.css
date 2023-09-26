@@ -22,11 +22,20 @@
     --grayishOrangeKeyShadow: hsl(28, 16%, 65%);
 
     --veryDarkGrayishBlue: hsl(221, 14%, 31%);
+
+    --white: white;
+    --textColor:var(--white);
+
+    --resetHover: #A2B3E1;
+    --equalsHover: #F96C5B;
+    --buttonHover:var(--white)
+
 }
 
 body {
     background-color: var(--mainBackground);
-    color: white;
+    color: var(--textColor);
+    transition: .5s ease-out;
 }
 
 main {
@@ -43,26 +52,27 @@ main {
     justify-content: space-between;
     width: 34%;
     margin-bottom: 1em;
+    user-select: none;
 }
 
-h1{
+h1 {
     font-size: xx-large;
 }
 
-p{
+p {
     font-size: small;
 }
 
-.theme{
+.theme {
     display: flex;
 }
 
-.theme p{
+.theme p {
     align-self: flex-end;
     margin-right: 1em;
 }
 
-.themeToggle{
+.themeToggle {
     display: flex;
     background-color: var(--screenBackground);
     border-radius: 1em;
@@ -72,7 +82,7 @@ p{
 }
 
 
-.visor{
+.visor {
     background-color: var(--screenBackground);
     width: 35%;
     height: 8%;
@@ -80,14 +90,15 @@ p{
     display: flex;
     justify-content: end;
     align-items: center;
+    user-select: none;
 }
 
-.res{
+.res {
     font-size: 35px;
     margin-right: 0.7em;
 }
 
-.keyboard{
+.keyboard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1em;
@@ -98,7 +109,7 @@ p{
     border-radius: 5px;
 }
 
-button{
+button {
     font-size: 32px;
     display: flex;
     justify-content: center;
@@ -112,30 +123,79 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    background-color: white;
+button:hover {
+    background-color: var(--buttonHover);
 }
 
-#reset, #del{
+#reset,
+#del {
     background-color: var(--blueKeyBackground);
-    color: white;
+    color: var(--white);
     border-bottom: solid var(--blueKeyShadow);
 }
 
-#reset:hover,#del:hover{
-    background-color:#A2B3E1 ;
+#reset:hover,
+#del:hover {
+    background-color: var(--resetHover);
 }
 
-#reset, #equals{
+#reset,
+#equals {
     grid-column: span 2;
 }
 
-#equals:hover{
-    background-color: #F96C5B;
+#equals:hover {
+    background-color: var(--equalsHover);
 }
 
-#equals{
+#equals {
     background-color: var(--redKeyBackground);
     border-bottom: solid var(--redKeyShadow);
-    color: white;
+    color: var(--white);
+}
+
+.themeSwitchContainer {
+    display: grid;
+    grid-template-columns: 1em 1em 1em;
+    grid-template-rows: 1em 1em;
+}
+
+.themeSwitchContainer p {
+    margin-bottom: 0.3em;
+    margin-left: 0.4em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.redButton {
+    border-radius: 100%;
+    width: 0.7em;
+    height: 0.7em;
+    background-color: var(--redKeyBackground);
+    translate: -0.8em 0em;
+    transition: translate 0.5s ease-in-out;
+}
+
+.themeToggle {
+    width: 3em;
+    height: 1.2em;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+
+}
+
+.redButton.position2 {
+    transition: translate 0.5s ease-in-out;
+    translate: 0.18em 0em;
+}
+
+.redButton.position3 {
+    transition: translate 0.5s ease-in-out;
+    translate: 1.1em 0em;
+}
+
+.redButton:hover {
+    transition: 0s;
+    background-color: var(--equalsHover);
 }
