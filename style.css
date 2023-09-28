@@ -196,3 +196,21 @@ button:hover {
     transition: 0s;
     background-color: var(--equalsHover);
 }
+
+@media (max-width:500px){
+    button{
+        padding: 0.5em;
+    }
+
+    .visor{
+        width: 80%;
+    }
+
+    .keyboard{
+        width: 80%;
+    }
+
+    .header{
+        width: 80%;
+    }
+}
