@@ -74,17 +74,18 @@ function go_to_3() {
 let buttons = document.querySelectorAll("button")
 let string = ''
 
-function readInput(input) {  
+function readInput(input) {
     let resSpot = document.querySelector(".res")
     if (input == "=") {
-        string = String(eval(string))
-        resSpot.innerHTML = string
-        console.log(string)
+        if (string != "") {
+            string = String(eval(string))
+            resSpot.innerHTML = string
+        }
     } else if (input == "RESET") {
         string = ""
         resSpot.innerHTML = string
-    }else if(input=="DEL"){
-        string = string.slice(0,-1)
+    } else if (input == "DEL") {
+        string = string.slice(0, -1)
         resSpot.innerHTML = string
     } else {
         string += input
