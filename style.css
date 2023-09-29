@@ -199,18 +199,18 @@ button:hover {
 
 @media (max-width:500px){
     button{
-        padding: 0.5em;
+        padding: 0.3em;
     }
 
     .visor{
-        width: 80%;
+        width: 90%;
     }
 
     .keyboard{
-        width: 80%;
+        width: 90%;
     }
 
     .header{
-        width: 80%;
+        width: 90%;
     }
 }
